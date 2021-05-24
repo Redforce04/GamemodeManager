@@ -31,6 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>References\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp_publicized">
+      <HintPath>References\Assembly-CSharp_publicized.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>References\CommandSystem.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Exiled.API, Version=2.10.0.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>packages\EXILED.2.10.0-beta\lib\net472\Exiled.API.dll</HintPath>
     </Reference>
@@ -66,13 +75,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\CustomGamemode.cs" />
-    <Compile Include="GamemodeManager.cs" />
+    <Compile Include="API\GamemodeManager.cs" />
+    <Compile Include="Commands\Disable.cs" />
+    <Compile Include="Commands\Enable.cs" />
+    <Compile Include="Gamemodes\TestGamemode.cs" />
+    <Compile Include="Plugin.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
